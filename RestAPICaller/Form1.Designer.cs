@@ -28,12 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.buttonSequence = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // buttonSequence
+            // 
+            this.buttonSequence.Location = new System.Drawing.Point(593, 32);
+            this.buttonSequence.Name = "buttonSequence";
+            this.buttonSequence.Size = new System.Drawing.Size(178, 111);
+            this.buttonSequence.TabIndex = 0;
+            this.buttonSequence.Text = "Fire in Sequence";
+            this.buttonSequence.UseVisualStyleBackColor = true;
+            this.buttonSequence.Click += new System.EventHandler(this.buttonSequence_Click);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.buttonSequence);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private Button buttonSequence;
     }
 }

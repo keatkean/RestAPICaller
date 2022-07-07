@@ -6,5 +6,10 @@ namespace RestAPICaller
         {
             InitializeComponent();
         }
+
+        private void buttonSequence_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
