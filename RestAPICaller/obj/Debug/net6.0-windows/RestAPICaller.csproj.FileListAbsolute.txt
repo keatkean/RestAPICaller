@@ -1,0 +1,17 @@
+C:\SourceCode\RestAPICaller\RestAPICaller\bin\Debug\net6.0-windows\RestAPICaller.exe
+C:\SourceCode\RestAPICaller\RestAPICaller\bin\Debug\net6.0-windows\RestAPICaller.deps.json
+C:\SourceCode\RestAPICaller\RestAPICaller\bin\Debug\net6.0-windows\RestAPICaller.runtimeconfig.json
+C:\SourceCode\RestAPICaller\RestAPICaller\bin\Debug\net6.0-windows\RestAPICaller.dll
+C:\SourceCode\RestAPICaller\RestAPICaller\bin\Debug\net6.0-windows\RestAPICaller.pdb
+C:\SourceCode\RestAPICaller\RestAPICaller\obj\Debug\net6.0-windows\RestAPICaller.csproj.AssemblyReference.cache
+C:\SourceCode\RestAPICaller\RestAPICaller\obj\Debug\net6.0-windows\RestAPICaller.Form1.resources
+C:\SourceCode\RestAPICaller\RestAPICaller\obj\Debug\net6.0-windows\RestAPICaller.csproj.GenerateResource.cache
+C:\SourceCode\RestAPICaller\RestAPICaller\obj\Debug\net6.0-windows\RestAPICaller.GeneratedMSBuildEditorConfig.editorconfig
+C:\SourceCode\RestAPICaller\RestAPICaller\obj\Debug\net6.0-windows\RestAPICaller.AssemblyInfoInputs.cache
+C:\SourceCode\RestAPICaller\RestAPICaller\obj\Debug\net6.0-windows\RestAPICaller.AssemblyInfo.cs
+C:\SourceCode\RestAPICaller\RestAPICaller\obj\Debug\net6.0-windows\RestAPICaller.csproj.CoreCompileInputs.cache
+C:\SourceCode\RestAPICaller\RestAPICaller\obj\Debug\net6.0-windows\RestAPICaller.dll
+C:\SourceCode\RestAPICaller\RestAPICaller\obj\Debug\net6.0-windows\refint\RestAPICaller.dll
+C:\SourceCode\RestAPICaller\RestAPICaller\obj\Debug\net6.0-windows\RestAPICaller.pdb
+C:\SourceCode\RestAPICaller\RestAPICaller\obj\Debug\net6.0-windows\RestAPICaller.genruntimeconfig.cache
+C:\SourceCode\RestAPICaller\RestAPICaller\obj\Debug\net6.0-windows\ref\RestAPICaller.dll
