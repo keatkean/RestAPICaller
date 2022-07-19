@@ -11,8 +11,9 @@ namespace RestAPICaller
     public partial class Form1 : Form
     {
         private readonly List<int> _numberList = new();
-        private HttpClient httpClient = new HttpClient();
-        private const string ApiUrl = "http://localhost:5000/lightup";
+        private readonly HttpClient _httpClient = new();
+        private const string ApiUrl = "http://localhost:5000/";
+        private const int SleepNumber = 10;
         public Form1()
         {
             InitializeComponent();
@@ -22,14 +23,7 @@ namespace RestAPICaller
         {
             foreach (var number in _numberList)
             {
-                var model = new Model
-                {
-                    id = number.ToString()
-                };
-
-                var content = new StringContent(JsonSerializer.Serialize(model), Encoding.UTF8,"application/json"); 
-                httpClient.PostAsync(ApiUrl,content);
-                Thread.Sleep(10);
+                Fire(number);
             }
             
         }
@@ -47,6 +41,29 @@ namespace RestAPICaller
         {
             GenerateNumberList();
             
+        }
+
+        private void buttonRandom_Click(object sender, EventArgs e)
+        {
+            var random = new Random();
+            var randomList = _numberList.OrderBy(number => random.Next());
+            foreach (var number in randomList)
+            {
+                Fire(number);
+            }
+        }
+
+        private void Fire(int number)
+        {
+            var content = new StringContent(JsonSerializer.Serialize(new Model {id = number.ToString()}), Encoding.UTF8, "application/json");
+            _httpClient.PostAsync($"{ApiUrl}lightup", content);
+            Thread.Sleep(SleepNumber);
+        }
+
+        private void buttonReset_Click(object sender, EventArgs e)
+        {
+            var content = new StringContent("", Encoding.UTF8, "application/json");
+            _httpClient.PostAsync($"{ApiUrl}reset", content);
         }
     }
 }
