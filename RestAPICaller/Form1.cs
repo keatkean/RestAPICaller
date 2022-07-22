@@ -35,7 +35,7 @@ namespace RestAPICaller
         private void Form1_Load(object sender, EventArgs e)
         {
             GenerateNumberList();
-            
+            webView21.Source = new Uri($"{ApiUrl}admin");
         }
 
         private void buttonRandom_Click(object sender, EventArgs e)
@@ -59,6 +59,7 @@ namespace RestAPICaller
         {
             var content = new StringContent("", Encoding.UTF8, "application/json");
             _httpClient.PostAsync($"{ApiUrl}reset", content);
+            webView21.Reload();
         }
     }
 }
