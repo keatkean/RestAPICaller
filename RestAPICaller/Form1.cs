@@ -1,5 +1,7 @@
 using System.Text;
 using System.Text.Json;
+using Microsoft.Extensions.Configuration;
+using Model;
 
 namespace RestAPICaller
 {
@@ -7,8 +9,8 @@ namespace RestAPICaller
     {
         private readonly List<int> _numberList = new();
         private readonly HttpClient _httpClient = new();
-        private const string ApiUrl = "http://localhost:5000/";
-        private const int SleepNumber = 10;
+        private static string? _apiUrl;
+        private static int _sleepNumber = 10;
         public Form1()
         {
             InitializeComponent();
@@ -34,8 +36,17 @@ namespace RestAPICaller
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            LoadSettings();
             GenerateNumberList();
-            webView21.Source = new Uri($"{ApiUrl}admin");
+            webView21.Source = new Uri($"{_apiUrl}admin");
+        }
+
+        private void LoadSettings()
+        {
+            var settings = Program.Configuration.GetSection("Settings").Get<Settings>();
+            _apiUrl = settings.Url;
+            _sleepNumber = int.Parse(settings.SleepTime);
+
         }
 
         private void buttonRandom_Click(object sender, EventArgs e)
@@ -51,14 +62,14 @@ namespace RestAPICaller
         private void Fire(int number)
         {
             var content = new StringContent(JsonSerializer.Serialize(new Model {id = number.ToString()}), Encoding.UTF8, "application/json");
-            _httpClient.PostAsync($"{ApiUrl}lightup", content);
-            Thread.Sleep(SleepNumber);
+            _httpClient.PostAsync($"{_apiUrl}lightup", content);
+            Thread.Sleep(_sleepNumber);
         }
 
         private void buttonReset_Click(object sender, EventArgs e)
         {
             var content = new StringContent("", Encoding.UTF8, "application/json");
-            _httpClient.PostAsync($"{ApiUrl}reset", content);
+            _httpClient.PostAsync($"{_apiUrl}reset", content);
             webView21.Reload();
         }
     }
