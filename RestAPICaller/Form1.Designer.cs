@@ -32,6 +32,8 @@
             this.buttonRandom = new System.Windows.Forms.Button();
             this.buttonReset = new System.Windows.Forms.Button();
             this.webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
+            this.buttonFireTile = new System.Windows.Forms.Button();
+            this.textBoxTile = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.webView21)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,7 +49,7 @@
             // 
             // buttonRandom
             // 
-            this.buttonRandom.Location = new System.Drawing.Point(12, 145);
+            this.buttonRandom.Location = new System.Drawing.Point(12, 143);
             this.buttonRandom.Name = "buttonRandom";
             this.buttonRandom.Size = new System.Drawing.Size(178, 111);
             this.buttonRandom.TabIndex = 1;
@@ -57,7 +59,7 @@
             // 
             // buttonReset
             // 
-            this.buttonReset.Location = new System.Drawing.Point(12, 274);
+            this.buttonReset.Location = new System.Drawing.Point(12, 809);
             this.buttonReset.Name = "buttonReset";
             this.buttonReset.Size = new System.Drawing.Size(112, 34);
             this.buttonReset.TabIndex = 2;
@@ -77,11 +79,32 @@
             this.webView21.TabIndex = 3;
             this.webView21.ZoomFactor = 1D;
             // 
+            // buttonFireTile
+            // 
+            this.buttonFireTile.Location = new System.Drawing.Point(12, 408);
+            this.buttonFireTile.Name = "buttonFireTile";
+            this.buttonFireTile.Size = new System.Drawing.Size(178, 111);
+            this.buttonFireTile.TabIndex = 4;
+            this.buttonFireTile.Text = "Fire";
+            this.buttonFireTile.UseVisualStyleBackColor = true;
+            this.buttonFireTile.Click += new System.EventHandler(this.buttonFireTile_Click);
+            // 
+            // textBoxTile
+            // 
+            this.textBoxTile.Location = new System.Drawing.Point(16, 347);
+            this.textBoxTile.MaxLength = 4;
+            this.textBoxTile.Name = "textBoxTile";
+            this.textBoxTile.PlaceholderText = "1-1400";
+            this.textBoxTile.Size = new System.Drawing.Size(150, 31);
+            this.textBoxTile.TabIndex = 5;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1017, 855);
+            this.Controls.Add(this.textBoxTile);
+            this.Controls.Add(this.buttonFireTile);
             this.Controls.Add(this.webView21);
             this.Controls.Add(this.buttonReset);
             this.Controls.Add(this.buttonRandom);
@@ -95,6 +118,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.webView21)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -104,5 +128,7 @@
         private Button buttonRandom;
         private Button buttonReset;
         private Microsoft.Web.WebView2.WinForms.WebView2 webView21;
+        private Button buttonFireTile;
+        private TextBox textBoxTile;
     }
 }

@@ -62,7 +62,7 @@ namespace RestAPICaller
         private void Fire(int number)
         {
             var content = new StringContent(JsonSerializer.Serialize(new Model {id = number.ToString()}), Encoding.UTF8, "application/json");
-            _httpClient.PostAsync($"{_apiUrl}lightup", content);
+            var test = _httpClient.PostAsync($"{_apiUrl}lightup", content);
             Thread.Sleep(_sleepNumber);
         }
 
@@ -71,6 +71,12 @@ namespace RestAPICaller
             var content = new StringContent("", Encoding.UTF8, "application/json");
             _httpClient.PostAsync($"{_apiUrl}reset", content);
             webView21.Reload();
+        }
+
+        private void buttonFireTile_Click(object sender, EventArgs e)
+        {
+            var tile = int.Parse(textBoxTile.Text.Trim());
+            Fire(tile);
         }
     }
 }
