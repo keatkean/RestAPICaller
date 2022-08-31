@@ -68,8 +68,8 @@ namespace RestAPICaller
 
         private void buttonReset_Click(object sender, EventArgs e)
         {
-            var content = new StringContent("", Encoding.UTF8, "application/json");
-            _httpClient.PostAsync($"{_apiUrl}reset", content);
+            //var content = new StringContent("", Encoding.UTF8, "application/json");
+            //_httpClient.PostAsync($"{_apiUrl}reset", content);
             webView21.Reload();
         }
 
@@ -77,6 +77,22 @@ namespace RestAPICaller
         {
             var tile = int.Parse(textBoxTile.Text.Trim());
             Fire(tile);
+        }
+
+        private void buttonAdmin_Click(object sender, EventArgs e)
+        {
+            webView21.CoreWebView2.Navigate($"{_apiUrl}admin");
+        }
+
+        private void buttonLoad_Click(object sender, EventArgs e)
+        {
+            var tile = int.Parse(textBoxTile.Text.Trim());
+            webView21.CoreWebView2.Navigate($"{_apiUrl}?id={tile}");
+        }
+
+        private void buttonAssignTiles_Click(object sender, EventArgs e)
+        {
+            webView21.CoreWebView2.Navigate($"{_apiUrl}assigntiles");
         }
     }
 }

@@ -34,12 +34,16 @@
             this.webView21 = new Microsoft.Web.WebView2.WinForms.WebView2();
             this.buttonFireTile = new System.Windows.Forms.Button();
             this.textBoxTile = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.buttonAdmin = new System.Windows.Forms.Button();
+            this.buttonLoad = new System.Windows.Forms.Button();
+            this.buttonAssignTiles = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.webView21)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonSequence
             // 
-            this.buttonSequence.Location = new System.Drawing.Point(12, 12);
+            this.buttonSequence.Location = new System.Drawing.Point(12, 554);
             this.buttonSequence.Name = "buttonSequence";
             this.buttonSequence.Size = new System.Drawing.Size(178, 111);
             this.buttonSequence.TabIndex = 0;
@@ -49,7 +53,7 @@
             // 
             // buttonRandom
             // 
-            this.buttonRandom.Location = new System.Drawing.Point(12, 143);
+            this.buttonRandom.Location = new System.Drawing.Point(12, 437);
             this.buttonRandom.Name = "buttonRandom";
             this.buttonRandom.Size = new System.Drawing.Size(178, 111);
             this.buttonRandom.TabIndex = 1;
@@ -59,11 +63,11 @@
             // 
             // buttonReset
             // 
-            this.buttonReset.Location = new System.Drawing.Point(12, 809);
+            this.buttonReset.Location = new System.Drawing.Point(12, 897);
             this.buttonReset.Name = "buttonReset";
-            this.buttonReset.Size = new System.Drawing.Size(112, 34);
+            this.buttonReset.Size = new System.Drawing.Size(178, 111);
             this.buttonReset.TabIndex = 2;
-            this.buttonReset.Text = "Reset";
+            this.buttonReset.Text = "Reload";
             this.buttonReset.UseVisualStyleBackColor = true;
             this.buttonReset.Click += new System.EventHandler(this.buttonReset_Click);
             // 
@@ -74,14 +78,14 @@
             this.webView21.DefaultBackgroundColor = System.Drawing.Color.White;
             this.webView21.Location = new System.Drawing.Point(196, 12);
             this.webView21.Name = "webView21";
-            this.webView21.Size = new System.Drawing.Size(809, 831);
+            this.webView21.Size = new System.Drawing.Size(719, 1163);
             this.webView21.Source = new System.Uri("http://localhost:5000/admin", System.UriKind.Absolute);
             this.webView21.TabIndex = 3;
             this.webView21.ZoomFactor = 1D;
             // 
             // buttonFireTile
             // 
-            this.buttonFireTile.Location = new System.Drawing.Point(12, 408);
+            this.buttonFireTile.Location = new System.Drawing.Point(12, 86);
             this.buttonFireTile.Name = "buttonFireTile";
             this.buttonFireTile.Size = new System.Drawing.Size(178, 111);
             this.buttonFireTile.TabIndex = 4;
@@ -91,18 +95,61 @@
             // 
             // textBoxTile
             // 
-            this.textBoxTile.Location = new System.Drawing.Point(16, 347);
+            this.textBoxTile.Location = new System.Drawing.Point(12, 40);
             this.textBoxTile.MaxLength = 4;
             this.textBoxTile.Name = "textBoxTile";
             this.textBoxTile.PlaceholderText = "1-1400";
-            this.textBoxTile.Size = new System.Drawing.Size(150, 31);
+            this.textBoxTile.Size = new System.Drawing.Size(178, 31);
             this.textBoxTile.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 25);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Tiles";
+            // 
+            // buttonAdmin
+            // 
+            this.buttonAdmin.Location = new System.Drawing.Point(12, 320);
+            this.buttonAdmin.Name = "buttonAdmin";
+            this.buttonAdmin.Size = new System.Drawing.Size(178, 111);
+            this.buttonAdmin.TabIndex = 7;
+            this.buttonAdmin.Text = "Admin";
+            this.buttonAdmin.UseVisualStyleBackColor = true;
+            this.buttonAdmin.Click += new System.EventHandler(this.buttonAdmin_Click);
+            // 
+            // buttonLoad
+            // 
+            this.buttonLoad.Location = new System.Drawing.Point(12, 203);
+            this.buttonLoad.Name = "buttonLoad";
+            this.buttonLoad.Size = new System.Drawing.Size(178, 111);
+            this.buttonLoad.TabIndex = 8;
+            this.buttonLoad.Text = "Load";
+            this.buttonLoad.UseVisualStyleBackColor = true;
+            this.buttonLoad.Click += new System.EventHandler(this.buttonLoad_Click);
+            // 
+            // buttonAssignTiles
+            // 
+            this.buttonAssignTiles.Location = new System.Drawing.Point(12, 671);
+            this.buttonAssignTiles.Name = "buttonAssignTiles";
+            this.buttonAssignTiles.Size = new System.Drawing.Size(178, 111);
+            this.buttonAssignTiles.TabIndex = 9;
+            this.buttonAssignTiles.Text = "Assign Tiles";
+            this.buttonAssignTiles.UseVisualStyleBackColor = true;
+            this.buttonAssignTiles.Click += new System.EventHandler(this.buttonAssignTiles_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1017, 855);
+            this.ClientSize = new System.Drawing.Size(927, 1187);
+            this.Controls.Add(this.buttonAssignTiles);
+            this.Controls.Add(this.buttonLoad);
+            this.Controls.Add(this.buttonAdmin);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.textBoxTile);
             this.Controls.Add(this.buttonFireTile);
             this.Controls.Add(this.webView21);
@@ -130,5 +177,9 @@
         private Microsoft.Web.WebView2.WinForms.WebView2 webView21;
         private Button buttonFireTile;
         private TextBox textBoxTile;
+        private Label label1;
+        private Button buttonAdmin;
+        private Button buttonLoad;
+        private Button buttonAssignTiles;
     }
 }
